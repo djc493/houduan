@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<mapper namespace="com.example.demo.mapper.UcollectMapper">
+    <resultMap type="com.example.demo.model.Ucollect" id="Ucollect_result">
+         <id column="c_id" property="cId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+         <result column="writer" property="Writer" javaType="java.lang.String" jdbcType="VARCHAR"/>
+         <result column="headline" property="Headline" javaType="java.lang.String" jdbcType="VARCHAR"/>
+         <result column="content" property="Content" javaType="java.lang.String" jdbcType="VARCHAR"/>
+         <result column="u_date" property="uDate" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+</resultMap>
+  <select id="selectAllUcollect" resultMap="Ucollect_result" >
+  select * from Ucollect
+  
+  </select>
+
+</mapper>
