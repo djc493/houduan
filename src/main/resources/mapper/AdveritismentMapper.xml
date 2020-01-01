@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" " http://mybatis-3-mapper.dtd">
+<mapper namespace="com.example.demo.mapper.AdveritismentMapper">
+	<resultMap type="com.example.demo.mapper.Adveritisment" id="adveritismentl_result">
+		<id column="a_id" property="aId" javaType="java.lang.Integer" jdbcType="INTEGER"/>
+		<result column="ad_name" property="adName" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="release_date" property="releaseDate" javaType="java.util.Date" jdbcType="TIMESTAMP"/>
+		<result column="city" property="city" javaType="java.lang.String" jdbcType="VARCHAR"/>
+		<result column="poster" property="poster" javaType="java.lang.String" jdbcType="VARCHAR"/>
+	</resultMap>
+	<select id="selectAllAdveritisments" resultMap="adveritisment_result">
+		select * from adveritisment
+	</select>
